@@ -1,17 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import Center from "@bedrock-layout/center";
+import styled from "styled-components";
 
+import "@bedrock-layout/css-reset/lib/reset.css";
+import Subscribe from "./stack";
+
+const BaseStyles = styled(Center)`
+  input {
+    border: 1px solid black;
+    background: white;
+  }
+
+  button {
+    color: white;
+    background: black;
+    border: none;
+  }
+
+  hr {
+    margin: 0;
+  }
+`;
+
+const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BaseStyles maxWidth="640px">
+      <h1>Hi</h1>
+    </BaseStyles>
   </React.StrictMode>,
-  document.getElementById('root')
+  rootElement
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
