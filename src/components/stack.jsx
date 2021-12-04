@@ -1,15 +1,7 @@
 import styled from "styled-components";
+import { spacingMap } from "./constant.js";
 
-const spacingMap = {
-  xs: "0.125rem",
-  sm: "0.25rem",
-  md: "0.5rem",
-  lg: "1rem",
-  xl: "2rem",
-  xxl: "4rem",
-};
-
-const Stack = styled.div`
+export const Stack = styled.div`
   display: grid;
   gap: ${(props) => spacingMap[props.gutter] ?? spacingMap.lg};
 `;

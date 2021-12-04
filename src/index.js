@@ -4,7 +4,8 @@ import Center from "@bedrock-layout/center";
 import styled from "styled-components";
 
 import "@bedrock-layout/css-reset/lib/reset.css";
-import Subscribe from "./stack";
+import Subscribe from "./components/stack";
+import FormSideBar from "./components/split";
 
 const BaseStyles = styled(Center)`
   input {
@@ -26,8 +27,8 @@ const BaseStyles = styled(Center)`
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <BaseStyles maxWidth="640px">
-      <Subscribe />
+    <BaseStyles padding="mdLg" maxWidth="85rem">
+      <FormSideBar />
     </BaseStyles>
   </React.StrictMode>,
   rootElement
