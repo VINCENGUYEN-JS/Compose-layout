@@ -27,7 +27,7 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
     <BaseStyles maxWidth="640px">
-      <h1>Hi</h1>
+      <Subscribe />
     </BaseStyles>
   </React.StrictMode>,
   rootElement
