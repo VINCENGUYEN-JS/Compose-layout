@@ -21,6 +21,16 @@ const Split = styled.div`
     fractions[fraction] ?? fractions["1/2"]};
 `;
 
+const Columns = styled.div`
+  display: grid;
+  gap: ${(props) =>
+    spacingMap[props.gutter] ? spacingMap[props.gutter] : spacingMap.lg};
+  grid-template-columns: repeat(${(props) => props.columns ?? 1}, 1fr);
+`;
+
+const Column = styled.div`
+  grid-column: span ${(props) => props.$span ?? 1};
+`;
 export default function FormSideBar() {
   return (
     <Split gutter="xxl" fraction="1/3">
@@ -39,29 +49,43 @@ export default function FormSideBar() {
 
 function Form() {
   return (
-    <Stack gutter="xl">
-      <FormGroup htmlFor="firstName" label="First Name">
-        <input type="text" id="firstName" />
-      </FormGroup>
-      <FormGroup htmlFor="lastName" label="Last Name">
-        <input type="text" id="lastName" />
-      </FormGroup>
-      <FormGroup htmlFor="email" label="Email">
-        <input type="text" id="email" />
-      </FormGroup>
-      <FormGroup htmlFor="address" label="Street Address">
-        <input type="text" id="address" />
-      </FormGroup>
-      <FormGroup htmlFor="city" label="City">
-        <input type="text" id="city" />
-      </FormGroup>
-      <FormGroup htmlFor="state" label="State">
-        <input type="text" id="state" />
-      </FormGroup>
-      <FormGroup htmlFor="zipCode" label="Zip Code">
-        <input type="text" id="zipCode" />
-      </FormGroup>
-    </Stack>
+    <Columns gutter="xl" columns={6}>
+      <Column $span={3}>
+        <FormGroup htmlFor="firstName" label="First Name">
+          <input type="text" id="firstName" />
+        </FormGroup>
+      </Column>
+      <Column $span={3}>
+        <FormGroup htmlFor="lastName" label="Last Name">
+          <input type="text" id="lastName" />
+        </FormGroup>
+      </Column>
+      <Column $span={4}>
+        <FormGroup htmlFor="email" label="Email">
+          <input type="text" id="email" />
+        </FormGroup>
+      </Column>
+      <Column $span={6}>
+        <FormGroup htmlFor="address" label="Street Address">
+          <input type="text" id="address" />
+        </FormGroup>
+      </Column>
+      <Column $span={2}>
+        <FormGroup htmlFor="city" label="City">
+          <input type="text" id="city" />
+        </FormGroup>
+      </Column>
+      <Column $span={2}>
+        <FormGroup htmlFor="state" label="State">
+          <input type="text" id="state" />
+        </FormGroup>
+      </Column>
+      <Column $span={2}>
+        <FormGroup htmlFor="zipCode" label="Zip Code">
+          <input type="text" id="zipCode" />
+        </FormGroup>
+      </Column>
+    </Columns>
   );
 }
 
