@@ -5,9 +5,10 @@ import styled from "styled-components";
 import { PadBox } from "@bedrock-layout/padbox";
 import "@bedrock-layout/css-reset/lib/reset.css";
 
-// import Subscribe from "./components/stack";
-// import FormSideBar from "./components/split";
-import ContactList from "./components/grid";
+// import Subscribe from "./layouts/stack";
+// import FormSideBar from "./layouts/split";
+// import ContactList from "./layouts/grid";
+import MenuBar from "./layouts/inline-cluster";
 
 const BaseStyles = styled(Center)`
   input {
@@ -35,7 +36,7 @@ ReactDOM.render(
       maxWidth="85rem"
       style={{ fontFamily: "sans-serif" }}
     >
-      <ContactList />
+      <MenuBar />
     </PadBox>
   </React.StrictMode>,
   rootElement
