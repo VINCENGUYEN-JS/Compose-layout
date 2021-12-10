@@ -2,10 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Center from "@bedrock-layout/center";
 import styled from "styled-components";
-
+import { PadBox } from "@bedrock-layout/padbox";
 import "@bedrock-layout/css-reset/lib/reset.css";
-import Subscribe from "./components/stack";
-import FormSideBar from "./components/split";
+
+// import Subscribe from "./components/stack";
+// import FormSideBar from "./components/split";
+import ContactList from "./components/grid";
 
 const BaseStyles = styled(Center)`
   input {
@@ -27,9 +29,14 @@ const BaseStyles = styled(Center)`
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <BaseStyles padding="mdLg" maxWidth="85rem">
-      <FormSideBar />
-    </BaseStyles>
+    <PadBox
+      as={Center}
+      padding="lg"
+      maxWidth="85rem"
+      style={{ fontFamily: "sans-serif" }}
+    >
+      <ContactList />
+    </PadBox>
   </React.StrictMode>,
   rootElement
 );

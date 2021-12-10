@@ -1208,10 +1208,45 @@
   "resolved" "https://registry.npmjs.org/@bedrock-layout/css-reset/-/css-reset-1.0.8.tgz"
   "version" "1.0.8"
 
-"@bedrock-layout/spacing-constants@^2.0.0":
+"@bedrock-layout/frame@2.0.0":
+  "integrity" "sha512-bi387wKlsJjQ7TipsBEqq5S6fdxyrixCpIj4EONf0HnV1SB2tEAXJacuN1qqPmREVsa69M0+CSj94qNnudsC9A=="
+  "resolved" "https://registry.npmjs.org/@bedrock-layout/frame/-/frame-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.1.0"
+
+"@bedrock-layout/inline-cluster@2.0.2":
+  "integrity" "sha512-h3TPBiMFYoCfuNtJiJyO9aVXTKs8rMXCJA4TuAWUS/geBSdge9GMxnpTqqWI8FDZL9blcZb5sZwG5Zelllz/5A=="
+  "resolved" "https://registry.npmjs.org/@bedrock-layout/inline-cluster/-/inline-cluster-2.0.2.tgz"
+  "version" "2.0.2"
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.1.0"
+
+"@bedrock-layout/padbox@2.0.1":
+  "integrity" "sha512-9YoAvxhl+qIxrf7rEZXdNUmAMRWZK6uPYXFwl82pILJB4ydnp3+SRcQEmr6kNq9Hhjoo6hLj8UiUeNhdR7r0lw=="
+  "resolved" "https://registry.npmjs.org/@bedrock-layout/padbox/-/padbox-2.0.1.tgz"
+  "version" "2.0.1"
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.1.0"
+
+"@bedrock-layout/spacing-constants@^2.0.0", "@bedrock-layout/spacing-constants@^2.1.0":
   "integrity" "sha512-bGpNIwFCaVu5mrJCakwawJfjuRZWJLWDgQUBlt5o2ZyOxT6Ytr+U2DszDm3DyadelTGxJAsYWGX64xSXPcUWzw=="
   "resolved" "https://registry.npmjs.org/@bedrock-layout/spacing-constants/-/spacing-constants-2.5.1.tgz"
   "version" "2.5.1"
+
+"@bedrock-layout/split@2.0.2":
+  "integrity" "sha512-xcOuLsFg1ZekdegeLJ7qHrEhATdjyTuOQk6tNTjaTX2JSILJ4bMjXFKCxjE6QyNgVVuBmpwxQGf2yevCEK4NUQ=="
+  "resolved" "https://registry.npmjs.org/@bedrock-layout/split/-/split-2.0.2.tgz"
+  "version" "2.0.2"
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.1.0"
+
+"@bedrock-layout/stack@2.0.1":
+  "integrity" "sha512-g9+Op9VFG4DB2Z0WRVGvxDM/txXyDl3lmi3eIUtyfqlz+S8aBtzyoFn7+S3Np91oPoaHVF1+16n6KGdZM92aRA=="
+  "resolved" "https://registry.npmjs.org/@bedrock-layout/stack/-/stack-2.0.1.tgz"
+  "version" "2.0.1"
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.1.0"
 
 "@cnakazawa/watch@^1.0.3":
   "integrity" "sha512-v9kIhKwjeZThiWrLmj0y17CWoyddASLj9O2yvbZkbvw/N3rWOYy9zkV66ursAoVr0mV15bL8g0c4QZUE6cdDoQ=="
