@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./Card.jsx";
+import Card from "../components/Card.jsx";
 import styled from "styled-components";
-import { spacingMap } from "./constant.js";
+import { spacingMap } from "../components/constant.js";
 
 const Grid = styled.div`
   display: grid;

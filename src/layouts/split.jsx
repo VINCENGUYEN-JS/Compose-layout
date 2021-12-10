@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Stack } from "./stack.jsx";
-import { spacingMap } from "./constant.js";
+import { spacingMap } from "../constant.js";
 
 const fractions = {
   "1/4": "1fr 3fr",

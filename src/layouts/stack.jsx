@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { spacingMap } from "./constant.js";
+import { spacingMap } from "../constant.js";
 
 export const Stack = styled.div`
   display: grid;
