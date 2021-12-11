@@ -9,7 +9,7 @@ const justifyAlignMap = {
   center: "center",
 };
 
-const InlineCluster = styled.div`
+export const InlineCluster = styled.div`
   --gutter: ${(props) => spacingMap[props.gutter] ?? spacingMap.lg};
   display: flex;
   flex-wrap: wrap;

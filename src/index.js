@@ -8,7 +8,8 @@ import "@bedrock-layout/css-reset/lib/reset.css";
 // import Subscribe from "./layouts/stack";
 // import FormSideBar from "./layouts/split";
 // import ContactList from "./layouts/grid";
-import MenuBar from "./layouts/inline-cluster";
+// import MenuBar from "./layouts/inline-cluster";
+import MenuBar from "./layouts/inline";
 
 const BaseStyles = styled(Center)`
   input {
@@ -27,17 +28,20 @@ const BaseStyles = styled(Center)`
   }
 `;
 
+const AppStyles = styled(PadBox).attrs(() => ({
+  as: Center,
+  padding: "md",
+  maxWidth: "85rem",
+}))`
+  font-family: sans-serif;
+`;
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <PadBox
-      as={Center}
-      padding="lg"
-      maxWidth="85rem"
-      style={{ fontFamily: "sans-serif" }}
-    >
+    <AppStyles>
       <MenuBar />
-    </PadBox>
+    </AppStyles>
   </React.StrictMode>,
   rootElement
 );
