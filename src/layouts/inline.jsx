@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { PadBox } from "@bedrock-layout/padbox";
 import { InlineCluster } from "./inline-cluster.jsx";
 
@@ -31,21 +31,34 @@ const stretchMap = {
   end: `> :last-child {flex:1}`,
 };
 
+const responsive = css`
+  --switchAt: ${({ switchAt }) =>
+    typeof switchAt === "string" ? switchAt : `${switchAt}px`};
+
+  flex-wrap: wrap;
+
+  & > * {
+    min-width: fit-content;
+    flex-basis: calc((var(--switchAt) - (100% - var(--gutter))) * 999);
+  }
+`;
+
 const Inline = styled(InlineCluster)`
   flex-wrap: nowrap;
-
   ${({ stretch }) => {
-    if (typeof stretch === "number") {
-      return `> :nth-child(${stretch + 1}) : {flex:1}`;
-    }
+    if (typeof stretch === "number")
+      return `> :nth-child(${stretch + 1}) { flex: 1 }`;
+
     return stretchMap[stretch] ?? "";
   }}
+
+  ${(switchAt) => switchAt && responsive}
 `;
 
 export default function MenuBar() {
   return (
     <MenuContainer>
-      <Inline stretch="all" align="center">
+      <Inline stretch={1} align="center" switchAt="40rem">
         <div>
           <Logo />
         </div>
