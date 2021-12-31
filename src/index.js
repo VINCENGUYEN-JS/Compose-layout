@@ -10,7 +10,8 @@ import "@bedrock-layout/css-reset/lib/reset.css";
 // import ContactList from "./layouts/grid";
 // import MenuBar from "./layouts/inline-cluster";
 // import MenuBar from "./layouts/inline";
-import PricingPlan from "./components/PricingPlan";
+// import PricingPlan from "./components/PricingPlan";
+import Testimonial from "./layouts/center";
 
 const BaseStyles = styled(Center)`
   input {
@@ -41,7 +42,7 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
     <AppStyles>
-      <PricingPlan />
+      <Testimonial />
     </AppStyles>
   </React.StrictMode>,
   rootElement
