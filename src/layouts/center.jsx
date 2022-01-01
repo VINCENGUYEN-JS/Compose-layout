@@ -10,14 +10,18 @@ export const Center = styled.div`
   margin-inline-end: auto;
   max-inline-size: ${(props) => props.maxWidth};
   ${(props) => props.centerText && "text-align:center;"}
-  display:flex;
+  ${(props) =>
+    props.centerChildren &&
+    `
+  display: flex;
   flex-direction: column;
   align-items: center;
+  `}
 `;
 
 export default function Testimonial() {
   return (
-    <Center maxWidth="100ch" centerText>
+    <Center as={Stack} gutter="xl" maxWidth="100ch" centerText centerChildren>
       <h2>Home4Hire</h2>
       <p>
         "Lorem ipsum dolor sit amet, nibh lorem convenire quo et. Usu ea libris
