@@ -43,7 +43,7 @@ const responsive = css`
   }
 `;
 
-const Inline = styled(InlineCluster)`
+export const Inline = styled(InlineCluster)`
   flex-wrap: nowrap;
   ${({ stretch }) => {
     if (typeof stretch === "number")

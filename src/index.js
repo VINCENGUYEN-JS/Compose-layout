@@ -12,7 +12,8 @@ import "@bedrock-layout/css-reset/lib/reset.css";
 // import MenuBar from "./layouts/inline";
 // import PricingPlan from "./components/PricingPlan";
 // import Testimonial from "./layouts/center";
-import Hero from "./components/Hero.jsx";
+// import Hero from "./components/Hero.jsx";
+import HeroMockup from "./components/HeroMockup";
 
 const BaseStyles = styled(Center)`
   input {
@@ -43,7 +44,7 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
     <AppStyles>
-      <Hero />
+      <HeroMockup />
     </AppStyles>
   </React.StrictMode>,
   rootElement
