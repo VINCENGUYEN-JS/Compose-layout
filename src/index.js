@@ -13,7 +13,8 @@ import "@bedrock-layout/css-reset/lib/reset.css";
 // import PricingPlan from "./components/PricingPlan";
 // import Testimonial from "./layouts/center";
 // import Hero from "./components/Hero.jsx";
-import HeroMockup from "./components/HeroMockup";
+// import HeroMockup from "./components/HeroMockup";
+import App from "./components/App";
 
 const BaseStyles = styled(Center)`
   input {
@@ -43,9 +44,7 @@ const AppStyles = styled(PadBox).attrs(() => ({
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <AppStyles>
-      <HeroMockup />
-    </AppStyles>
+    <App />
   </React.StrictMode>,
   rootElement
 );
