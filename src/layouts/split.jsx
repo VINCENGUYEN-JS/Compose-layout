@@ -14,7 +14,7 @@ const fractions = {
   "auto-end": "1fr auto",
 };
 
-const Split = styled.div`
+export const Split = styled.div`
   display: grid;
   gap: ${(props) => spacingMap[props.gutter] ?? spacingMap.lg};
   grid-template-columns: ${({ fraction }) =>
